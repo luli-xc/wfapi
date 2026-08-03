@@ -489,7 +489,7 @@ export default {
       if (jsonMode) {
         return new Response(JSON.stringify({
           success: false,
-          message: '请求学校接口失败',
+          message: '请求学校接口失败.',
           error: err.message
         }), { status: 500, headers: corsHeaders });
       }
