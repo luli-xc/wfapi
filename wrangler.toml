@@ -1,0 +1,21 @@
+name = "wfapi"
+main = "worker.js"
+compatibility_date = "2026-08-03"
+
+# 路由配置（可选，部署后绑定域名时使用）
+# routes = [
+#   { pattern = "wfapi.example.com/*", zone_id = "your-zone-id" }
+# ]
+
+# 环境变量（可选）
+# [vars]
+# API_BASE_URL = "https://cwpt.cup.edu.cn"
+
+# 如果你需要 KV 存储
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "your-kv-id"
+
+# 定时任务（可选）
+# [triggers]
+# crons = ["0 0 * * *"]
