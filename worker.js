@@ -437,11 +437,11 @@ export default {
     let studentId = url.searchParams.get('id');
     let jsonMode = url.searchParams.has('json');
 
-    // 如果是 POST，尝试从表单中读取
+    // 如果是 POST，以表单提交为准（覆盖 URL 参数）
     if (request.method === 'POST') {
       try {
         const formData = await request.formData();
-        if (!studentId) studentId = formData.get('id');
+        studentId = formData.get('id') || studentId;
         if (!jsonMode && formData.get('json') === 'true') jsonMode = true;
       } catch (e) {
         // 不是表单数据，忽略
